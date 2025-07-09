@@ -1,12 +1,13 @@
 <template>
   <div id="app">
     <h1>Welcome to My Vue Chrome Extension</h1>
-    <button @click="handleClick">Click Me</button>
+    <ImButton @click="handleClick">Click Me</ImButton>
   </div>
 </template>
 
 <script setup>
+import { useImMessage } from 'im-design';
 function handleClick() {
-  alert('Button clicked in the popup!');
+  useImMessage().info('Hello, world!');
 }
 </script>
